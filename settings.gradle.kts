@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Messaging"
 include(":app")
+include(":build-logic")

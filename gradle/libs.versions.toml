@@ -1,0 +1,49 @@
+[versions]
+activityCompose = "1.7.2"
+junitVersion = "1.1.5"
+retrofit = "2.9.0"
+androidGradlePlugin = "8.1.0"
+kotlinAndroid = "1.8.10"
+coreKtx = "1.10.1"
+junit = "4.13.2"
+junitAndroid = "1.1.5"
+androidxLifecycle = "2.6.1"
+composeBom = "2023.06.01"
+espresso-core = "3.5.1"
+appcompat = "1.6.1"
+material = "1.9.0"
+moshi = "2.9.0"
+okhttp = "4.10.0"
+koinCore = "3.4.3"
+
+[libraries]
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+material = { group = "androidx.compose.material3", name = "material3" }
+google-fonts = { group = "androidx.compose.ui", name = "ui-text-google-fonts" }
+activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose" }
+lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidxLifecycle" }
+compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+compose-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+compose-preview-debug = { group = "androidx.compose.ui", name = "ui-tooling" }
+retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+moshi-converter = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "moshi" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitAndroid" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+com-google-android-material-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koinCore" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koinCore" }
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlinAndroid" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+com-android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinAndroid" }
+
+[bundles]
+retrofit = ["retrofit-core", "moshi-converter"]
